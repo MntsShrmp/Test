@@ -10,20 +10,22 @@ import Enemy.*;
 
 
 public class Game extends PApplet {
-  Character c;
+
+Character c;
 ArrayList<Enemy> enemies;
-void setup(){
-  size(800,800);
-  frameRate(60);
+public void setup(){
+  
   c = new Character(200,200);
   enemies = new ArrayList<Enemy>();
-  enemies.add(new Enemy(random(width-50)+25,random(height-50)-25,new SineBouncingMovement()));
-  enemies.add(new Enemy(random(width-50)+25,random(height-50)-25,new BouncingMovement()));
-//  enemies.add(new Enemy(random(width-50)+25,random(height-50)-25,new SineSideMovement()));
-//  enemies.add(new Enemy(random(width-50)+25,random(height-50)-25,new SineSideMovement()));
+  enemies.add(new Enemy(random(width-50)+25,
+                        random(height-50)-25,
+                        new HeavyMovementDecorator(new BouncingMovement())
+                        ));
+
+
 }
 
-void draw(){
+public void draw(){
   background(0);
   c.update(); 
   for(Enemy e:enemies){
@@ -34,10 +36,9 @@ void draw(){
     e.render();
   if(c.isHit(enemies))
     stop();
-  
 }
 
-void keyPressed(){
+public void keyPressed(){
   //System.out.println(key);
   if(key == 'a')
     c.moveLeft();
@@ -51,4 +52,17 @@ void keyPressed(){
   
 }
 
+public void changed(String s) {
+  int k = 5;
+}
+
+  public void settings() {  size(800,800); }
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "--present", "--window-color=#666666", "--stop-color=#cccccc", "sinewdp" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
+  }
 }
