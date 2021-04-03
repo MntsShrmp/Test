@@ -14,8 +14,10 @@ class BouncingMovement implements MovementStrategy{
       e.xSpeed = e.speed * e.xSpeed/sp;
       e.ySpeed = e.speed * e.ySpeed/sp;
     }
+     else{return}
     e.x += e.xSpeed;
     e.y += e.ySpeed;
+    
    }
   
 }
