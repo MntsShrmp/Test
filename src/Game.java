@@ -47,8 +47,8 @@ void keyPressed(){
     c.moveUp();
   if(key == 's')
     c.moveDown();
-  
-  
 }
 
+  
+void print(){return}
 }
