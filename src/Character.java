@@ -28,7 +28,7 @@ class Character{
   rect(x,y,size,size); 
  }
  
- private void checkCollisionWithSides(){
+ private void checkCollisionWithSidesss(){
    if(x<=-xSpeed){
      x = 0;
      xSpeed = 0;
