@@ -6,7 +6,7 @@ class Enemy{
   public float speed;
   public MovementStrategy movement;
   
-  public Enemy(float x,float y,MovementStrategy movement){
+  public Enemyyyy(float x,float y,MovementStrategy movement){
      this.x = x;
      this.y = y;
      speed = 4;
