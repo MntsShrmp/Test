@@ -77,6 +77,10 @@ class Character{
  public void moveRight(){
   this.xSpeed += speed; 
  }
+
+ public void moveDiagonal() {
+   
+ }
  
  public boolean isHit(ArrayList<Enemy> enemies){
    for(Enemy e:enemies){

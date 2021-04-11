@@ -51,4 +51,8 @@ void keyPressed(){
   
 }
 
+void foo() {
+  
+}
+
 }

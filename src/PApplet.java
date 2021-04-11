@@ -9,9 +9,6 @@ class PApplet {
     void background(int hey) {
     }
 
-    void stop() {
-    }
-
     float random(float hey) {
         return 1.0f;
     }

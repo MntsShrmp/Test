@@ -16,7 +16,7 @@ class Enemy{
      this.movement = movement;
   }
   
-  public void render(){
+  public void renderrr(){
     fill(50,50,200);
     noStroke();
     rect(x,y,size,size);  
