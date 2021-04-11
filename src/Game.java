@@ -23,7 +23,7 @@ void setup(){
 //  enemies.add(new Enemy(random(width-50)+25,random(height-50)-25,new SineSideMovement()));
 }
 
-void draw(){
+void drawww(){
   background(0);
   c.update(); 
   for(Enemy e:enemies){
