@@ -37,7 +37,7 @@ void draw(){
   
 }
 
-void keyPressed(){
+void keyPresseddhgfhdgjg(){
   //System.out.println(key);
   if(key == 'a')
     c.moveLeft();
