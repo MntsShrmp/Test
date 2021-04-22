@@ -1,5 +1,5 @@
 //initial class
-class Enemy{
+class Enemykkfjdfkgjkf{
   public float x,y;
   public float size;
   protected float xSpeed,ySpeed;
