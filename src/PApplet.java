@@ -6,7 +6,7 @@ class PApplet {
 
     float sin(float theta){return theta;}
 
-    void background(int hey) {
+    void backgroundjfjdgdfkgkj(int hey) {
     }
 
     void stop() {
