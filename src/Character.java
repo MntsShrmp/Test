@@ -22,7 +22,7 @@ class Character{
    this.ySpeed = 0;
  }
   
- public void render(){
+ public void renderNew(){
   fill(200,50,50);
   noStroke();
   rect(x,y,size,size); 
