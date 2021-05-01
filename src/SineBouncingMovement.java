@@ -12,6 +12,7 @@ class SineBouncingMovement extends BouncingMovement{
     theta += PI/200;
     super.move(e);
     e.speed = storedSpeed;
+    PApplet.isGreaterThanZero(10);
   }
   
 }
