@@ -11,28 +11,27 @@ import Enemy.*;
 
 public class Game extends PApplet {
   Character c;
-ArrayList<Enemy> enemies;
+EnemyList enemies;
 void setup(){
   size(800,800);
   frameRate(60);
   c = new Character(200,200);
-  enemies = new ArrayList<Enemy>();
-  enemies.add(new Enemy(random(width-50)+25,random(height-50)-25,new SineBouncingMovement()));
-  enemies.add(new Enemy(random(width-50)+25,random(height-50)-25,new BouncingMovement()));
-//  enemies.add(new Enemy(random(width-50)+25,random(height-50)-25,new SineSideMovement()));
-//  enemies.add(new Enemy(random(width-50)+25,random(height-50)-25,new SineSideMovement()));
+  EnemyList enemies ;
+  do{
+    enemies = new EnemyList();
+    enemies.add(new Enemy(random(width-50)+25,random(height-50)-25,new SineBouncingMovement()));
+    enemies.add(new Enemy(random(width-50)+25,random(height-50)-25,new BouncingMovement()));
+  }while(sqrt(enemies.totalSpeed() + 1/4) > 10);
+  this.enemies = enemies;
 }
 
 void draw(){
   background(0);
   c.update(); 
-  for(Enemy e:enemies){
-     e.update();
-  }
+  enemies.updateAll();
   c.render();
-  for(Enemy e:enemies)
-    e.render();
-  if(c.isHit(enemies))
+  enemies.drawAll();
+  if(c.isHit(enemies.getEnemies()))
     stop();
   
 }
@@ -49,10 +48,5 @@ void keyPressed(){
     c.moveDown();
 }
 
-
-String message(){
-  if(c.direction() == 1) return "right";
-  else return "left or stop";
-}
 
 }

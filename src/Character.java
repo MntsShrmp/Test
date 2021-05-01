@@ -90,12 +90,4 @@ class Character{
    }
    return false;
  }
-
- int direction() {
-   if (speed > 0)
-     return 1;
-   else
-     return 0;
- }
-
 }
