@@ -90,4 +90,13 @@ class Character{
    }
    return false;
  }
+
+
+ String message(int f) {
+   int k = PApplet.isGreaterThanZero(f);
+   if (k == 0)
+     return "You lost";
+   else
+     return "You win";
+ }
 }

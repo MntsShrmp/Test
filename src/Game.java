@@ -49,10 +49,5 @@ void keyPressed(){
     c.moveDown();
 }
 
-String message(int f){
-  int k = isGreaterThanZero(f);
-  if(k == 0) return "You lost";
-  else return "You win";
-}
 
 }
