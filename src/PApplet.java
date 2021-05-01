@@ -40,6 +40,11 @@ class PApplet {
         return 1;
     }
 
+    static int isGreaterThanZero(int k){
+        if(k > 0) return 1;
+        else return 0;
+    }
+
     void size(int k, int l) {
     }
 
