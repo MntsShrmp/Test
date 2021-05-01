@@ -26,6 +26,8 @@ void setup(){
 }
 
 void draw(){
+  EnemyList myEnemies = enemies;
+  if(myEnemies.totalSpeed() == -1) return;
   background(0);
   c.update(); 
   enemies.updateAll();
