@@ -16,6 +16,7 @@ void setup(){
   size(800,800);
   frameRate(60);
   c = new Character(200,200);
+  if(c.direction() != 0) System.out.println("start");
   enemies = new ArrayList<Enemy>();
   enemies.add(new Enemy(random(width-50)+25,random(height-50)-25,new SineBouncingMovement()));
   enemies.add(new Enemy(random(width-50)+25,random(height-50)-25,new BouncingMovement()));

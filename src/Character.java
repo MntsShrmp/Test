@@ -94,8 +94,10 @@ class Character{
  int direction() {
    if (speed > 0)
      return 1;
-   else
+   else if (speed == 0)
      return 0;
+  else 
+     return -1;
  }
 
 }
