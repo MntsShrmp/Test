@@ -50,4 +50,9 @@ void keyPressed(){
 }
 
 
+String message(){
+  if(c.direction() == 1) return "right";
+  else return "left or stop";
+}
+
 }

@@ -91,12 +91,11 @@ class Character{
    return false;
  }
 
-
- String message(int f) {
-   int k = PApplet.isGreaterThanZero(f);
-   if (k == 0)
-     return "You lost";
+ int direction() {
+   if (speed > 0)
+     return 1;
    else
-     return "You win";
+     return 0;
  }
+
 }
