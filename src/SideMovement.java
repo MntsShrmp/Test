@@ -1,5 +1,7 @@
 class SideMovement implements MovementStrategy{
    int direction;
+   String hey;
+   int wow;
    public SideMovement(){
     direction = random(4);//0 n,1 e,2 s,3 w 
    }
